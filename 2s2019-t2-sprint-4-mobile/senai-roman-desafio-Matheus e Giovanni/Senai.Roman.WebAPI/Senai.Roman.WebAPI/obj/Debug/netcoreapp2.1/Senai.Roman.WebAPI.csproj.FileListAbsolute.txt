@@ -1,0 +1,28 @@
+C:\Users\41813664803\source\repos\Senai.Roman.WebAPI\Senai.Roman.WebAPI\bin\Debug\netcoreapp2.1\Senai.Roman.WebAPI.deps.json
+C:\Users\41813664803\source\repos\Senai.Roman.WebAPI\Senai.Roman.WebAPI\bin\Debug\netcoreapp2.1\Senai.Roman.WebAPI.runtimeconfig.json
+C:\Users\41813664803\source\repos\Senai.Roman.WebAPI\Senai.Roman.WebAPI\bin\Debug\netcoreapp2.1\Senai.Roman.WebAPI.runtimeconfig.dev.json
+C:\Users\41813664803\source\repos\Senai.Roman.WebAPI\Senai.Roman.WebAPI\bin\Debug\netcoreapp2.1\Senai.Roman.WebAPI.dll
+C:\Users\41813664803\source\repos\Senai.Roman.WebAPI\Senai.Roman.WebAPI\bin\Debug\netcoreapp2.1\Senai.Roman.WebAPI.pdb
+C:\Users\41813664803\source\repos\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.csprojAssemblyReference.cache
+C:\Users\41813664803\source\repos\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\41813664803\source\repos\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.RazorAssemblyInfo.cache
+C:\Users\41813664803\source\repos\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.RazorAssemblyInfo.cs
+C:\Users\41813664803\source\repos\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.AssemblyInfoInputs.cache
+C:\Users\41813664803\source\repos\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.AssemblyInfo.cs
+C:\Users\41813664803\source\repos\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\41813664803\source\repos\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.dll
+C:\Users\41813664803\source\repos\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.pdb
+C:\Users\41813664803\Desktop\2s2019-t2-sprint-4-mobile\2s2019-t2-sprint-4-mobile\senai-roman-desafio-Matheus e Giovanni\Senai.Roman.WebAPI\Senai.Roman.WebAPI\bin\Debug\netcoreapp2.1\Senai.Roman.WebAPI.deps.json
+C:\Users\41813664803\Desktop\2s2019-t2-sprint-4-mobile\2s2019-t2-sprint-4-mobile\senai-roman-desafio-Matheus e Giovanni\Senai.Roman.WebAPI\Senai.Roman.WebAPI\bin\Debug\netcoreapp2.1\Senai.Roman.WebAPI.runtimeconfig.json
+C:\Users\41813664803\Desktop\2s2019-t2-sprint-4-mobile\2s2019-t2-sprint-4-mobile\senai-roman-desafio-Matheus e Giovanni\Senai.Roman.WebAPI\Senai.Roman.WebAPI\bin\Debug\netcoreapp2.1\Senai.Roman.WebAPI.runtimeconfig.dev.json
+C:\Users\41813664803\Desktop\2s2019-t2-sprint-4-mobile\2s2019-t2-sprint-4-mobile\senai-roman-desafio-Matheus e Giovanni\Senai.Roman.WebAPI\Senai.Roman.WebAPI\bin\Debug\netcoreapp2.1\Senai.Roman.WebAPI.dll
+C:\Users\41813664803\Desktop\2s2019-t2-sprint-4-mobile\2s2019-t2-sprint-4-mobile\senai-roman-desafio-Matheus e Giovanni\Senai.Roman.WebAPI\Senai.Roman.WebAPI\bin\Debug\netcoreapp2.1\Senai.Roman.WebAPI.pdb
+C:\Users\41813664803\Desktop\2s2019-t2-sprint-4-mobile\2s2019-t2-sprint-4-mobile\senai-roman-desafio-Matheus e Giovanni\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.csprojAssemblyReference.cache
+C:\Users\41813664803\Desktop\2s2019-t2-sprint-4-mobile\2s2019-t2-sprint-4-mobile\senai-roman-desafio-Matheus e Giovanni\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\41813664803\Desktop\2s2019-t2-sprint-4-mobile\2s2019-t2-sprint-4-mobile\senai-roman-desafio-Matheus e Giovanni\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.RazorAssemblyInfo.cache
+C:\Users\41813664803\Desktop\2s2019-t2-sprint-4-mobile\2s2019-t2-sprint-4-mobile\senai-roman-desafio-Matheus e Giovanni\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.RazorAssemblyInfo.cs
+C:\Users\41813664803\Desktop\2s2019-t2-sprint-4-mobile\2s2019-t2-sprint-4-mobile\senai-roman-desafio-Matheus e Giovanni\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.AssemblyInfoInputs.cache
+C:\Users\41813664803\Desktop\2s2019-t2-sprint-4-mobile\2s2019-t2-sprint-4-mobile\senai-roman-desafio-Matheus e Giovanni\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.AssemblyInfo.cs
+C:\Users\41813664803\Desktop\2s2019-t2-sprint-4-mobile\2s2019-t2-sprint-4-mobile\senai-roman-desafio-Matheus e Giovanni\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\41813664803\Desktop\2s2019-t2-sprint-4-mobile\2s2019-t2-sprint-4-mobile\senai-roman-desafio-Matheus e Giovanni\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.dll
+C:\Users\41813664803\Desktop\2s2019-t2-sprint-4-mobile\2s2019-t2-sprint-4-mobile\senai-roman-desafio-Matheus e Giovanni\Senai.Roman.WebAPI\Senai.Roman.WebAPI\obj\Debug\netcoreapp2.1\Senai.Roman.WebAPI.pdb
