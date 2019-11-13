@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Text, View, Image, StyleSheet, AsyncStorage, TouchableOpacity, Picker } from 'react-native';
+import { Text, View, Image, StyleSheet, AsyncStorage, TouchableOpacity, Picker, ScrollView, SafeAreaView } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
+import Accordian from '../components/Accordian';
 
 class Main extends Component {
   // apresentar a lista de eventos
@@ -10,6 +11,7 @@ class Main extends Component {
     this.state = {
       eventos: [],
       categoria: null,
+      menu: [],
     };
   }
 
@@ -29,7 +31,7 @@ class Main extends Component {
       .catch(erro => console.warn(erro));
   };
 
-  _filtrar = async(categoria) => {
+  _filtrar = async (categoria) => {
     this.setState({ categoria: categoria })
     // pego o valor da categoria e manda para a api
     // para filtrar por categoria
@@ -44,28 +46,37 @@ class Main extends Component {
       .catch(erro => console.warn(erro));
   }
 
+  renderAccordians = () => {
+    const items = [];
+    for (item of this.state.eventos) {
+      items.push(
+        <Accordian
+          title={item.nome}
+          data={item.sinopse}
+        />
+      );
+    }
+    return items;
+  }
+
   render() {
     return (
       <View style={styles.tudo}>
         <Text style={styles.h1}>Aqui estão os Lançamentos</Text>
         {/* <Text>{this.state.categoria}</Text> */}
         <Picker selectedValue={this.state.categoria} onValueChange={this._filtrar} style={styles.picker}>
-          <Picker.Item label="Selecionar categoria" value={'0'}/>
+          <Picker.Item label="Selecionar categoria" value={'0'} />
           <Picker.Item label="Ação" value={5} />
           <Picker.Item label="Ficção Científica" value={7} />
           <Picker.Item label="Drama" value={13} />
         </Picker>
-        <FlatList
-          style={styles.flatList}
-          data={this.state.eventos}
-          keyExtractor={item => item.idMidia}
-          renderItem={({ item }) => (
-            <View style={styles.lista}>
-              <Text style={styles.nome}>{item.nome}</Text>
-              <Text style={styles.duracao}>{item.duracao}</Text>
-            </View>
-          )}
-        />
+        <View style={styles.container}>
+          <SafeAreaView>
+            <ScrollView>
+              {this.renderAccordians()}
+            </ScrollView>
+          </SafeAreaView>
+        </View>
       </View>
     );
   }
@@ -129,9 +140,13 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginBottom: 10,
   },
-  picker:{
+  picker: {
     color: 'white',
-  }
+  },
+  container: {
+    backgroundColor: '#2A3A3B',
+    height: '80%'
+  },
 });
 
 export default Main;
