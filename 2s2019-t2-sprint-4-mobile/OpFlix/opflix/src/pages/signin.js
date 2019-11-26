@@ -25,6 +25,17 @@ class SignIn extends Component {
     };
   }
 
+
+  componentDidMount() {
+    this._verificacao()
+  }
+
+  _verificacao = async () => {
+      if(await AsyncStorage.getItem('@opflix:token') != null){
+          this.props.navigation.navigate('MainNavigator')
+      }
+  }
+
   // enviar para a api
   _realizarLogin = async () => {
     // console.warn(this.state.email + ' - ' + this.state.senha);

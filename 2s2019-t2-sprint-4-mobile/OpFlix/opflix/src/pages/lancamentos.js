@@ -1,23 +1,52 @@
 import React, { Component } from 'react';
-import { Text, View, Image, StyleSheet, AsyncStorage, TouchableOpacity, Picker, ScrollView, SafeAreaView } from 'react-native';
+import { Text, View, Image, StyleSheet, AsyncStorage, TouchableOpacity, Picker, ScrollView, SafeAreaView, ActivityIndicator } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import Accordian from '../components/Accordian';
 
+// import Icon from 'react-native-vector-icons/FontAwesome';
+
+import Icon from 'react-native-vector-icons/FontAwesome5';
+
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faVideo } from '@fortawesome/free-solid-svg-icons';
+
 class Main extends Component {
   // apresentar a lista de eventos
+
+  static navigationOptions = {
+    // header: null,
+    tabBarIcon: ({ }) => (
+      <Text><FontAwesomeIcon icon={faVideo} color={'white'}/></Text>
+    )
+  };
 
   constructor() {
     super();
     this.state = {
       eventos: [],
-      categoria: null,
+      categoriaEscolhida: null,
       menu: [],
+      loading: true,
+      categorias: [],
     };
   }
 
   componentDidMount() {
+    this._carregarCategorias();
     this._carregarEventos();
   }
+
+  _carregarCategorias = async () => {
+    await fetch('http://192.168.4.26:5000/api/categorias', {
+        headers: {
+            "Accept": "application/json",
+            "Authorization": "Bearer " + await AsyncStorage.getItem("@opflix:token")
+        }
+    })
+        .then(resposta => resposta.json())
+        .then(data => this.setState({ categorias: data }))
+        .catch(erro => console.warn(erro));
+};
 
   _carregarEventos = async () => {
     await fetch('http://192.168.4.26:5000/api/midias', {
@@ -27,22 +56,21 @@ class Main extends Component {
       },
     })
       .then(resposta => resposta.json())
-      .then(data => this.setState({ eventos: data }))
+      .then(data => this.setState({ loading: false , eventos: data }))
       .catch(erro => console.warn(erro));
   };
 
-  _filtrar = async (categoria) => {
-    this.setState({ categoria: categoria })
+  _filtrar = async (itemValue) => {
     // pego o valor da categoria e manda para a api
     // para filtrar por categoria
-    await fetch('http://192.168.4.26:5000/api/midias/FiltrarPorCategoria/' + categoria, {
+    await fetch('http://192.168.4.26:5000/api/midias/FiltrarPorCategoria/' + itemValue, {
       headers: {
         "Accept": "application/json",
         "Authorization": "Bearer " + await AsyncStorage.getItem("@opflix:token")
       },
     })
       .then(resposta => resposta.json())
-      .then(data => this.setState({ eventos: data }))
+      .then(data => this.setState({ loading: false , eventos: data }))
       .catch(erro => console.warn(erro));
   }
 
@@ -64,12 +92,18 @@ class Main extends Component {
       <View style={styles.tudo}>
         <Text style={styles.h1}>Aqui estão os Lançamentos</Text>
         {/* <Text>{this.state.categoria}</Text> */}
-        <Picker selectedValue={this.state.categoria} onValueChange={this._filtrar} style={styles.picker}>
-          <Picker.Item label="Selecionar categoria" value={'0'} />
-          <Picker.Item label="Ação" value={5} />
-          <Picker.Item label="Ficção Científica" value={7} />
-          <Picker.Item label="Drama" value={13} />
+        <Picker style={styles.picker}
+            selectedValue={this.state.categoriaEscolhida} 
+            onValueChange={(itemValue, itemIndex) => { 
+                this.setState({ categoriaEscolhida: itemValue })
+                this._filtrar(itemValue)}}>
+            <Picker.item label="Filtrar" value="" selectedValue />
+            {this.state.categorias.map(e => {
+                return (<Picker.item label={e.nome} value={e.idCategoria}/>
+                )
+            })}
         </Picker>
+        {this.state.loading ? <ActivityIndicator style={styles.container} size="large" color="#FE5300"/> :
         <View style={styles.container}>
           <SafeAreaView>
             <ScrollView>
@@ -77,6 +111,7 @@ class Main extends Component {
             </ScrollView>
           </SafeAreaView>
         </View>
+        }
       </View>
     );
   }
