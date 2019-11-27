@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, Image, StyleSheet, AsyncStorage, TouchableOpacity, Picker, ScrollView, SafeAreaView, ActivityIndicator } from 'react-native';
+import {StatusBar} from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import Accordian from '../components/Accordian';
 
@@ -16,7 +17,7 @@ class Main extends Component {
   static navigationOptions = {
     // header: null,
     tabBarIcon: ({ }) => (
-      <Text><FontAwesomeIcon icon={faVideo} color={'white'}/></Text>
+      <Text><FontAwesomeIcon icon={faVideo} color={'white'} width={20}/></Text>
     )
   };
 
@@ -81,6 +82,8 @@ class Main extends Component {
         <Accordian
           title={item.nome}
           data={item.sinopse}
+          data2={item.duracao}
+          data3={item.dataLancamento}
         />
       );
     }
@@ -90,20 +93,33 @@ class Main extends Component {
   render() {
     return (
       <View style={styles.tudo}>
+        <StatusBar
+          barStyle = "light-content"
+          // dark-content, light-content and default
+          hidden = {false}
+          //To hide statusBar
+          backgroundColor = "#2A3A3B"
+          //Background color of statusBar only works for Android
+          translucent = {false}
+          //allowing light, but not detailed shapes
+          networkActivityIndicatorVisible = {true}
+        />
         <Text style={styles.h1}>Aqui estão os Lançamentos</Text>
         {/* <Text>{this.state.categoria}</Text> */}
-        <Picker style={styles.picker}
-            selectedValue={this.state.categoriaEscolhida} 
-            onValueChange={(itemValue, itemIndex) => { 
-                this.setState({ categoriaEscolhida: itemValue })
-                this._filtrar(itemValue)}}>
-            <Picker.item label="Filtrar" value="" selectedValue />
-            {this.state.categorias.map(e => {
-                return (<Picker.item label={e.nome} value={e.idCategoria}/>
-                )
-            })}
-        </Picker>
-        {this.state.loading ? <ActivityIndicator style={styles.container} size="large" color="#FE5300"/> :
+        <View style={{borderRadius: 10, width: '55%', backgroundColor: '#EB4A5F', alignSelf: "center", marginBottom: 10}}>
+          <Picker style={{color: 'white'}}
+              selectedValue={this.state.categoriaEscolhida} 
+              onValueChange={(itemValue, itemIndex) => { 
+                  this.setState({ categoriaEscolhida: itemValue })
+                  this._filtrar(itemValue)}}>
+              <Picker.item label="Filtrar" value="" selectedValue style={styles.filtrar}/>
+              {this.state.categorias.map(e => {
+                  return (<Picker.item label={e.nome} value={e.idCategoria}/>
+                  )
+              })}
+          </Picker>
+        </View>
+        {this.state.loading ? <ActivityIndicator style={styles.container} size="large" color="#EB4A5F"/> :
         <View style={styles.container}>
           <SafeAreaView>
             <ScrollView>
@@ -128,6 +144,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     margin: 10,
     marginTop: 20,
+    marginBottom: 20,
   },
   flatList: {
     marginBottom: 10,
@@ -177,11 +194,16 @@ const styles = StyleSheet.create({
   },
   picker: {
     color: 'white',
+    backgroundColor: '#EB4A5F',
+    width: '90%',
+    borderRadius: 10,
+    alignSelf: "center",
   },
   container: {
     backgroundColor: '#2A3A3B',
-    height: '80%'
+    height: '78%',
   },
+  
 });
 
 export default Main;

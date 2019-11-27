@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {StatusBar} from 'react-native';
 import { Text, View, Image, StyleSheet, AsyncStorage, TouchableOpacity, Picker, ScrollView, SafeAreaView } from 'react-native';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';

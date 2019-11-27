@@ -5,12 +5,14 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import JwtDecode from 'jwt-decode';
+import {StatusBar} from 'react-native';
+
 
 class Perfil extends Component {
     static navigationOptions = {
         // header: null,
         tabBarIcon: ({  }) => (
-            <Text><FontAwesomeIcon icon={faUser} color={'white'}/></Text>
+            <Text><FontAwesomeIcon icon={faUser} color={'white'} width={20}/></Text>
         )
     };
 
@@ -48,7 +50,7 @@ class Perfil extends Component {
                   <Text style={styles.textos}>{this.state.email}</Text>
             </View>
             <TouchableOpacity style={styles.btn} onPress={this._delogar}>
-                <Text style={styles.textobtn}>Sair da Conta</Text>
+                <Text style={styles.textobtn}>Sair</Text>
             </TouchableOpacity>
         </View>
       );
@@ -72,7 +74,7 @@ class Perfil extends Component {
       },
       btn:{
         backgroundColor: '#EB4A5F',
-        width: '38%',
+        width: '40%',
         textAlign: "center",
         alignItems: "center",
         borderRadius: 10,

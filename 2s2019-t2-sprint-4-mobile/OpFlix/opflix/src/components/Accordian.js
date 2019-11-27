@@ -8,6 +8,8 @@ export default class Accordian extends Component {
         super(props);
         this.state = {
             data: props.data,
+            data2: props.data2,
+            data3: props.data3,
             expanded: false,
         }
     }
@@ -26,6 +28,8 @@ export default class Accordian extends Component {
                             this.state.expanded &&
                             <View style={styles.child}>
                                 <Text style={styles.crianca}>{this.props.data}</Text>
+                                <Text style={styles.crianca}>Duração:  {this.props.data2}</Text>
+                                <Text style={styles.crianca}>Lançado em:  {this.props.data3}</Text>
                             </View>
                         }
                     </View>
@@ -45,10 +49,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#2A3A3B',
     },
     tudo2: {
-        marginBottom: 20,
+        marginBottom: 15,
     },
     title: {
-        fontSize: 20,
+        fontSize: 22,
         fontWeight: 'bold',
         color: '#EB4A5F',
     },
@@ -76,7 +80,8 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     crianca: {
-        fontSize: 17,
+        fontSize: 18,
+        paddingBottom: 10
     }
 
 });
